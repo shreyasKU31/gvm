@@ -2,6 +2,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FileText, Calendar, CheckCircle, Download } from 'lucide-react';
 
+// Page-specific SEO metadata
+export const metadata = {
+  title: "Admissions 2025-26 - Apply Now",
+  description: "Admissions open for 2025-26 at Gurukula Vidya Mandira. Apply for Pre-KG to 10th standard. Simple admission process, affordable fees. Download application form and fee structure.",
+  keywords: ["school admission Magadi 2025", "Pre-KG admission Karnataka", "school admission near Bengaluru", "KSEEB school admission", "affordable school admission"],
+  openGraph: {
+    title: "Admissions Open 2025-26 | Gurukula Vidya Mandira",
+    description: "Join Karnataka's premier school. Pre-KG to 10th standard admissions now open. Apply today for your child's bright future.",
+  },
+};
+
 export default function Admissions() {
   return (
     <main className="min-h-screen flex flex-col bg-stone-50">

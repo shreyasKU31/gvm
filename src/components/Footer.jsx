@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin, Phone, Mail, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,20 +9,31 @@ export default function Footer() {
       <div className="border-b border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <div className="flex items-center gap-6">
-              <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+              <a href="tel:+919986571057" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone size={16} />
-                <span>+91 98765 43210</span>
+                <span>+91 99865 71057</span>
               </a>
-              <a href="mailto:info@gurukulavidyamandira.edu" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Mail size={16} />
-                <span>info@gurukulavidyamandira.edu</span>
+              <a href="tel:+919916830328" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone size={16} />
+                <span>+91 99168 30328</span>
+              </a>
+              <a href="tel:+919110242200" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone size={16} />
+                <span>+91 91102 42200</span>
+              </a>
+              <a href="tel:+919844854556" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone size={16} />
+                <span>+91 98448 54556</span>
               </a>
             </div>
             <div className="flex items-center gap-4">
-              <a href="#" className="hover:text-primary transition-colors"><Facebook size={18} /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Twitter size={18} /></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="YouTube">
+                <Youtube size={20} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
         </div>
@@ -33,7 +45,13 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold">G</div>
+              <Image 
+                src="/assets/logo/logo.avif" 
+                alt="Gurukula Vidya Mandira Logo" 
+                width={36} 
+                height={36} 
+                className="rounded-full"
+              />
               <span className="font-serif text-lg font-bold text-white">Gurukula Vidya Mandira</span>
             </div>
             <p className="text-stone-400 text-sm leading-relaxed mb-6">
@@ -44,7 +62,7 @@ export default function Footer() {
               <p>
                 Gurukula Vidya Mandira,<br />
                 Kuduru, Magadi Taluk,<br />
-                Ramanagara District - 561101
+                Bengaluru Rural District - 561101
               </p>
             </div>
           </div>
@@ -62,15 +80,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Admissions */}
+          {/* Admissions & Contact */}
           <div>
             <h3 className="text-white font-bold font-serif mb-6">Admissions</h3>
             <p className="text-stone-400 text-sm mb-4">
               Admissions are open for the academic year 2025-26. Apply now to secure a bright future for your child.
             </p>
-            <button className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-md font-medium transition-colors w-full md:w-auto">
-              Apply Online
-            </button>
+            <Link href="/admissions" className="inline-block bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-md font-medium transition-colors mb-6">
+              Apply Now
+            </Link>
+            <div className="pt-4 border-t border-stone-800">
+              <a href="mailto:gurukulavidyamandira.official@gmail.com" className="text-stone-400 hover:text-primary transition-colors flex items-center gap-2 text-sm">
+                <Mail size={14} />
+                <span className="break-all">gurukulavidyamandira.official@gmail.com</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

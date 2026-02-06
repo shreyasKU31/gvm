@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
@@ -16,7 +17,6 @@ export default function Navbar() {
       href: '#',
       dropdown: [
         { name: 'About Us', href: '/about' },
-        { name: 'Faculty', href: '/faculty' },
         { name: 'Gallery', href: '/gallery' },
       ]
     },
@@ -25,7 +25,6 @@ export default function Navbar() {
       href: '#',
       dropdown: [
         { name: 'Curriculum', href: '/academics' },
-        { name: 'Facilities', href: '/facilities' },
         { name: 'Activities', href: '/activities' },
       ]
     },
@@ -51,15 +50,19 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
           <Link href="/" className="flex-shrink-0 flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
-              G
-            </div>
+            <Image 
+              src="/assets/logo/logo.avif" 
+              alt="Gurukula Vidya Mandira Logo" 
+              width={48} 
+              height={48} 
+              className="rounded-full shadow-md"
+            />
             <div className="flex flex-col">
               <span className="font-serif text-lg font-bold text-primary-dark leading-tight">
                 Gurukula Vidya Mandira
               </span>
               <span className="text-xs text-stone-600 tracking-wider uppercase">
-                Est. 1995
+                Est. 1994
               </span>
             </div>
           </Link>
